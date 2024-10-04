@@ -1,0 +1,323 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Light teal gradient */
+    color: #004d40; /* Dark teal text */
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Navigation styling */
+nav {
+    background: #004d40; /* Dark teal */
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    animation: floatNavItems 3s ease-in-out infinite;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #e91e63; /* Pink on hover */
+    background-color: #80deea; /* Light blue on hover */
+}
+
+/* Floating effect for navigation */
+@keyframes floatNavItems {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Header section */
+header {
+    background: linear-gradient(135deg, #004d40, #00796b); /* Dark teal to medium teal gradient */
+    color: #fff;
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+    animation: slideUp 1s ease-out;
+}
+
+header .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeIn 1.2s ease-out; /* Removed glow effect */
+}
+
+header p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+header .social-links {
+    margin-top: 15px;
+    animation: fadeIn 2s ease-out;
+}
+
+header .social-links .icon {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: rotateIcon 5s linear infinite;
+}
+
+header .social-links .icon:hover {
+    color: #e91e63; /* Pink on hover */
+    transform: scale(1.2);
+}
+
+/* Icon rotation animation */
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Profile picture styling */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 6px solid #ffeb3b; /* Yellow border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: floatPic 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* Floating effect for profile picture */
+@keyframes floatPic {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Section styling */
+.section {
+    padding: 3rem 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 32px;
+    color: #004d40; /* Dark teal headings */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+    animation: fadeIn 1s ease-out;
+}
+
+.section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 60px;
+    height: 4px;
+    background-color: #00796b; /* Medium teal accent */
+    transform: translateX(-50%);
+}
+
+/* Skills section */
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+#skills ul li {
+    background: #00796b; /* Medium teal for skill tags */
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: bounceSkillTags 2s infinite;
+}
+
+#skills ul li:hover {
+    transform: translateY(-5px);
+    background-color: #ffeb3b; /* Yellow on hover */
+}
+
+/* Bounce animation for skill tags */
+@keyframes bounceSkillTags {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Projects styling */
+.project-item {
+    background: #b2ebf2; /* Light teal background */
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid #00796b; /* Medium teal border */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideLeft 1s ease-out;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    font-size: 26px;
+    color: #004d40; /* Dark teal text */
+}
+
+.project-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Contact section */
+#contact a {
+    color: #00796b; /* Medium teal contact links */
+    text-decoration: none;
+    font-size: 18px;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #ffeb3b; /* Yellow on hover */
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #004d40; /* Dark teal */
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-out;
+}
+
+footer .button {
+    display: inline-block;
+    background: #00796b; /* Medium teal button */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer .button:hover {
+    background: #ffeb3b; /* Yellow on hover */
+    transform: translateY(-5px);
+}
+
+/* Additional Animation Classes */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(40px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+    0% { transform: translateX(-40px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Applying animations */
+.animate-fade-in {
+    animation: fadeIn 1.5s ease;
+}
+
+.animate-slide-up {
+    animation: slideUp 1.5s ease;
+}
+
+.animate-slide-left {
+    animation: slideLeft 1.5s ease;
+}
+
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
